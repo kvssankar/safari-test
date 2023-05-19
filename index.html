@@ -6,9 +6,23 @@
 </head>
 <body>
 
-<h1>My Website</h1>
+<button id="open-safari-button" type="button" value="Open Safari">
+</button>
 
-<p>This is my website. It will open in full screen mode in Safari and it will not be opened in Instagram's browser.</p>
+<script>
+function openSafari() {
+  var url = "https://www.apple.com";
+  
+  // Check if the user has Safari installed.
+  if (navigator.userAgent.indexOf("Safari") != -1) {
+    // Open Safari with the specified URL.
+    window.open(url);
+  } else {
+    // Show an error message.
+    alert("Safari is not installed.");
+  }
+}
+</script>
 
 </body>
 </html>
