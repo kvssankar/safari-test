@@ -15,6 +15,18 @@
         var url = "https://www.example.com"; // Replace with your desired URL
         window.open(url, "_blank");
       }
+      if (userAgent.match(/instagram/i)) {
+  var shouldOpenInBrowser = confirm("Open in Safari or Chrome for a better experience?");
+  if (shouldOpenInBrowser) {
+    var isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+    if (isIOS) {
+      window.location.href = 'https://www.example.com';  // Replace with your website URL
+    } else {
+      window.open('https://www.example.com');  // Replace with your website URL
+    }
+  }
+}
+
     </script>
   </body>
 </html>
